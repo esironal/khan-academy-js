@@ -6,35 +6,38 @@ For all available methods (e.g., `playlists/chemistry/videos`), see the official
 
 ## Example Usage #1
 
-    // Request all Algebra I videos
-    ka.api('playlists/algebra-i/videos', function (response) {
+```javascript
+// Request all Algebra I videos
+ka.api('playlists/algebra-i/videos', function (response) {
 
-        // Get the YouTube ID for the first video in the playlist
-        var first_video = response[0].youtube_id;
+    // Get the YouTube ID for the first video in the playlist
+    var first_video = response[0].youtube_id;
 
-        // Embed the first video in a div with the id 'myDiv'
-        ka.embed('myDiv', first_video);
+    // Embed the first video in a div with the id 'myDiv'
+    ka.embed('myDiv', first_video);
 
-    });
-
+});
+```
 
 
 ## Example Usage #2
 
-    // Request all Chemistry videos
-    ka.api('playlists/chemistry/videos', function (response) {
+```javascript
+// Request all Chemistry videos
+ka.api('playlists/chemistry/videos', function (response) {
 
-        // Get the YouTube ID for the first video in the playlist
-        var first_video = response[0].youtube_id;
+    // Get the YouTube ID for the first video in the playlist
+    var first_video = response[0].youtube_id;
 
-        // Embed the first video in a div with the id 'myDiv'
-        // with some custom attributes
-        ka.embed({
-            id: 'myDiv',
-            class: 'yt-player',
-            youtube_id: first_video,
-            width: 320,
-            height: 280
-        });
-
+    // Embed the first video in a div with the id 'myDiv'
+    // with some custom attributes
+    ka.embed({
+        id: 'myDiv',
+        class: 'yt-player',
+        youtube_id: first_video,
+        width: 320,
+        height: 280
     });
+
+});
+```
